@@ -1,5 +1,5 @@
 CREATE TABLE wtr(
-uid integer primary key autoincrement,
+id bigserial primary key,
 "Lic No" TEXT,
 "Licensee" TEXT,
 "Product" TEXT,
@@ -29,5 +29,6 @@ uid integer primary key autoincrement,
 "Ant Feeding Loss" TEXT,
 "Fade Margin" TEXT,
 "EMI Code" TEXT,
-"Area Code/Country" TEXT
+"Area Code/Country" TEXT,
+"thing" TEXT
 );

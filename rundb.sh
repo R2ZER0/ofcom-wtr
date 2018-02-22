@@ -1,4 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-docker run --name wtrpg -e POSTGRES_PASSWORD=password -p 5432:5432 postgres:10.2
+docker run -d --name wtrpg -e POSTGRES_PASSWORD=password -p 5432:5432 \
+    -v $PWD/data/:/data/ \
+    -v $PWD/.pgdata:/var/lib/postgresql/data/ \
+    postgres:10.2
