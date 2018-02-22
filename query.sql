@@ -1,0 +1,1 @@
+select count(*) from data as r, data as t where r.tr='R' and t.tr='T' and r.f=t.f and r.cw=t.cw and t.product like '%Fixed Links%' and r.product like '%Fixed Links%' and mod(floor(t.a::real)::int, 360::int) = mod(floor(r.a::real)::int + 180, 360::int);
